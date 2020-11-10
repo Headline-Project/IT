@@ -1,0 +1,925 @@
+/**************************************/
+/************ General CSS *************/
+/**************************************/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    color: #303841;
+    font-family: 'Open Sans', sans-serif;
+    background: #fafafa;
+}
+
+a {
+    color: #00adb5;
+    transition: 0.3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #ff5722;
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    color: #303841;
+    font-weight: 400;
+    padding: 0;
+    margin: 0 0 16px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    color: #ff5722;
+    margin: 0 0 16px 0;
+    padding: 0;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+	color: #00adb5;
+}
+
+img {
+    border-radius: 4px;
+}
+
+
+
+/**************************************/
+/********** Back to Top CSS ***********/
+/**************************************/
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #fafafa;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 32px;
+    right: 16px;
+    bottom: 16px;
+    border-radius: 4px;
+    transition: all 0.3s;
+    z-index: 8;
+}
+
+.back-to-top i {
+    color: #ff5722;
+}
+
+.back-to-top:hover {
+    background: #fafafa;
+}
+
+.back-to-top:hover i {
+    color: #00adb5;
+}
+
+
+/**************************************/
+/************** Nav CSS ***************/
+/**************************************/
+#nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    padding: 24px 0;
+    background: transparent;
+/*    border-bottom: 1px solid #ff9085;*/
+    transition: all .3s;
+    z-index: 999;
+}
+
+#nav.nav-sticky {
+    height: inherit;
+    padding: 0;
+    background: #fafafa;
+    transition: all .3s;
+    border-bottom: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+}
+
+#nav .navbar {
+    transition: all .3s;
+    background: transparent !important;
+}
+
+#nav.nav-sticky .navbar {
+    transition: all .3s;
+    background: #fafafa !important;
+}
+
+#nav .navbar-brand {
+    font-size: 24px;
+	color: #fafafa;
+/*
+	fill: #fafafa;
+	height: 32px;
+	align-items: flex-start;
+*/
+    font-weight: 700;
+    line-height: 0;
+    font-family: 'Lora', serif;
+}
+
+#nav.nav-sticky .navbar-brand {
+	color: #ff5722;
+}
+
+#nav .nav-link,
+#nav .nav-link:focus,
+#nav .nav-link:hover,
+#nav .nav-link.active {
+	font-family: 'Lora', serif;
+    color: #fafafa;
+	text-transform: uppercase;
+}
+
+#nav.nav-sticky .nav-link,
+#nav.nav-sticky .nav-link:focus,
+#nav.nav-sticky .nav-link:hover,
+#nav.nav-sticky .nav-link.active {
+    color: #303841;
+}
+
+#nav .nav-link:hover,
+#nav .nav-link.active {
+    color: #ffffff;
+}
+
+#nav.nav-sticky .nav-link:hover,
+#nav.nav-sticky .nav-link.active {
+    color: #ff5722;
+}
+
+#nav .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    background: #fafafa;
+}
+
+@media (max-width: 768px) {
+    #nav,
+    #nav .container,
+    #nav .navbar {
+        background: #fafafa !important;
+    }
+    
+    #nav .nav-link,
+    #nav .nav-link:focus,
+    #nav .nav-link:hover,
+    #nav .nav-link.active,
+	#nav .navbar-brand {
+        color: #303841;
+    }
+    
+    #nav .nav-link:hover,
+    #nav .nav-link.active {
+        color: #ff5722;
+    }
+}
+
+
+
+/**************************************/
+/************* Header CSS *************/
+/**************************************/
+.header {
+    position: relative;
+    padding: 180px 0 100px 0;
+    text-align: center;
+    background: linear-gradient( rgba(255,87,34, 0.95), rgba(255,87,34, 0.95) ), url(../img/header.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+#logo {
+	position: relative;
+    display: inline-block;
+	height: 128px;
+	margin-bottom: 24px;
+    padding-bottom: 24px;
+}
+
+.header h1 {
+    position: relative;
+    display: inline-block;
+    color: #fafafa;
+    font-size: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+}
+
+.header h1 span {
+    color: #fafafa;
+}
+
+/*
+.header h1::after {
+    position: absolute;
+    content: "";
+    width: 90%;
+    height: 3px;
+    left: 5%;
+    bottom: 0;
+    background: #ff9085;
+}
+*/
+
+.header p {
+    color: #fafafa;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.header .btn {
+    padding: 15px 35px;
+    color: #ff5722;
+    font-size: 22px;
+    background: #fafafa;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.header .btn:hover {
+/*    background: #fafafa;*/
+	color: #00adb5;
+}
+
+.header .btn i {
+    margin-right: 5px;
+}
+
+@media(max-width: 767.98px) {
+    .header h1 {
+        font-size: 60px;
+    }
+    
+    .header p {
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 575.98px) {
+    .header h1 {
+        font-size: 40px;
+    }
+    
+    .header p {
+        font-size: 20px;
+    }
+}
+
+
+
+/**************************************/
+/******** Section Header CSS **********/
+/**************************************/
+.section-header {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto 64px auto;
+    text-align: center;
+}
+
+.section-header h4 {
+    color: #00adb5;
+    font-size: 16px;
+/*    letter-spacing: 3px;*/
+    margin-bottom: 5px;
+}
+
+.section-header h2 {
+    display: inline-block;
+    color: #ff5722;
+    font-size: 48px;
+    text-transform: uppercase;
+/*    letter-spacing: 5px;*/
+}
+
+.section-header h2::after {
+    position: absolute;
+    content: "";
+    width: 64px;
+    height: 3px;
+    left: calc(50% - 30px);
+    bottom: 0;
+    background: #ff5722;
+}
+
+@media(max-width: 767.98px) {
+    .section-header h4 {
+        font-size: 17px;
+    }
+    
+    .section-header h2 {
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 575.98px) {
+    .section-header h4 {
+        font-size: 16px;
+    }
+    
+    .section-header h2 {
+        font-size: 35px;
+    }
+}
+
+
+
+/**************************************/
+/************* About CSS **************/
+/**************************************/
+.about {
+    position: relative;
+    padding: 100px 0;
+    background: #fafafa;
+}
+
+.about .about-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.about .about-img img {
+    width: 100%;
+}
+
+.about .about-content {
+    position: relative;
+    width: 100%;
+}
+
+.about .about-content:first-child {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+.about .about-content h3 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: none;
+}
+
+.about .about-content p {
+    position: relative;
+    font-size: 18px;
+}
+
+.about .btn {
+    position: relative;
+    font-size: 14px;
+/*    letter-spacing: 1px;*/
+    color: #fafafa;
+    background: #ff5722;
+	font-weight: 600;
+}
+
+.about .btn:hover {
+    color: #00adb5;
+    background: #ff5722;
+}
+
+@media(max-width: 767.98px) {
+    .about .about-img {
+        margin-bottom: 32px;
+    }
+}
+
+
+
+/**************************************/
+/*************** Team CSS *************/
+/**************************************/
+.team {
+    position: relative;
+    padding: 100px 0 70px 0;
+    background: #fafafa;
+}
+
+.team .team-item {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.team .team-item .team-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    
+}
+
+.team .team-item .team-link {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255,87,34, .95);
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.team .team-item .team-link a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin: 0 2px -100px 2px;
+    padding: 6px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #ff5722;
+    background: #fafafa;
+    border-radius: 4px;
+}
+
+.team .team-item:hover .team-link {
+    opacity: 1;
+}
+
+.team .team-item:hover .team-link a {
+    margin: 0 2px;
+}
+
+.team .team-item .team-link a:hover {
+    color: #00adb5;
+    background: #fafafa;
+}
+
+.team .team-item .team-info {
+    position: relative;
+    width: 100%;
+    padding-top: 16px;
+}
+
+.team .team-item .team-info h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.team .team-item .team-info p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+
+
+/**************************************/
+/************ Services CSS ************/
+/**************************************/
+.service {
+    position: relative;
+    padding: 0px 0 40px 0;
+    background: #fafafa;
+}
+
+.service .row {
+    margin-bottom: 60px;
+}
+
+.service .service-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.service .service-img img {
+    width: 100%;
+}
+
+.service .service-detail h3 {
+    font-size: 30px;
+/*    letter-spacing: 1px;*/
+    text-transform: none;
+}
+
+.service .service-detail h3 i {
+    margin-right: 20px;
+}
+
+.service .service-detail p {
+    font-size: 18px;
+}
+
+@media(max-width: 767.98px) {
+    .service .service-img {
+        margin-bottom: 30px;
+    }
+}
+
+
+
+/**************************************/
+/********* Call To Action CSS *********/
+/**************************************/
+.call-to-action {
+    position: relative;
+    padding: 100px 0;
+    background: #ff5722;
+}
+
+.call-to-action .container {
+    max-width: 700px;
+}
+
+.call-to-action .section-header h4 {
+    color: #fafafa;
+	font-size: 24px;
+}
+
+.call-to-action .section-header h2 {
+    color: #fafafa;
+}
+
+.call-to-action .section-header p {
+    color: #fafafa;
+}
+
+.call-to-action .btn {
+    padding: 16px 32px;
+    color: #ff5722;
+    font-size: 18px;
+/*    letter-spacing: 1px;*/
+    text-transform: uppercase;
+    background: #fafafa;
+	font-weight: 600;
+}
+
+.call-to-action .btn:hover {
+    color: #00adb5;
+    background: #fafafa;
+}
+
+.call-to-action .btn i {
+    margin-right: 5px;
+}
+
+
+
+/**************************************/
+/************ Portfolio CSS ***********/
+/**************************************/
+.portfolio {
+    position: relative;
+    padding: 100px 0 70px 0;
+    background: #fafafa;
+}
+
+.portfolio .portfolio-item {
+    margin-bottom: 32px;
+    overflow: hidden;
+}
+
+.portfolio .portfolio-item .portfolio-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    
+}
+
+.portfolio .portfolio-item .portfolio-link {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255,87,34, .95);
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.portfolio .portfolio-item .portfolio-link a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 8px -100px 8px;
+    padding: 6px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #ff5722;
+    background: #fafafa;
+    border-radius: 4px;
+}
+
+.portfolio .portfolio-item:hover .portfolio-link {
+    opacity: 1;
+}
+
+.portfolio .portfolio-item:hover .portfolio-link a {
+    margin: 0 5px;
+}
+
+.portfolio .portfolio-item .portfolio-link a:hover {
+    color: #00adb5;
+    background: #fafafa;
+}
+
+.portfolio .portfolio-item .portfolio-info {
+    position: relative;
+    width: 100%;
+    padding-top: 16px;
+}
+
+.portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.portfolio .portfolio-item .portfolio-info p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+
+
+/**************************************/
+/************* Pricing CSS ************/
+/**************************************/
+.pricing {
+    position: relative;
+    padding: 100px 0 80px 0;
+    background: #fafafa;
+}
+
+.pricing .price-content {
+    position: relative;
+    background: #ffffff;
+    text-align: center;
+    margin-bottom: 32px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.pricing .price-plan {
+    position: relative;
+    background: #ff5722;
+    padding: 32px;
+}
+
+.pricing .price-plan h3 {
+    color: #fafafa;
+    font-size: 32px;
+/*    letter-spacing: 5px;*/
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.pricing .price-plan p {
+    color: #fafafa;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.pricing .price-plan i {
+    color: #fafafa;
+    font-size: 48px;
+}
+
+.pricing .price-details {
+    padding: 30px 0;
+    font-size: 16px;
+    list-style: none;
+    text-align: center;
+}
+
+.pricing .price-details li {
+    padding: 8px 32px;
+    border-bottom: 1px solid #fafafa;
+}
+
+.pricing .price-details li:last-child {
+    border: none;
+}
+
+.pricing .price-content .btn {
+	font-weight: 600;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    color: #fafafa;
+    background: #ff5722;
+    border: none;
+}
+
+.pricing .price-content .btn:hover {
+    color: #fafafa;
+    background: #00adb5;
+}
+
+
+
+/**************************************/
+/************* Contact CSS ************/
+/**************************************/
+.contact {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+	background: #fafafa
+/*    background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) ), url("../img/") no-repeat top left;*/
+}
+
+.contact .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact .form-control:focus {
+    border: 1px solid #ff5722;
+    box-shadow: none;
+}
+
+.contact .btn {
+    display: block;
+    width: 100%;
+    color: #fafafa;
+    background: #ff5722;
+	font-weight: 600;
+}
+
+.contact .btn:hover {
+    color: #ff5722;
+    background: #fafafa;
+}
+
+
+
+/**************************************/
+/************* Footer CSS *************/
+/**************************************/
+.footer {
+    position: relative;
+    background: #ff5722;
+}
+
+.footer .footer-top {
+    padding: 60px 0;
+    border-bottom: 1px solid #fafafa;
+}
+
+.footer .footer-top h2 {
+    position: relative;
+    color: #fafafa;
+    font-size: 30px;
+    padding-bottom: 8px;
+    margin-bottom: 32px;
+}
+
+.footer .footer-top h2::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background: #fafafa;
+}
+
+.footer .contact-info h4 {
+    color: #fafafa;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.footer .contact-info p {
+    color: #fafafa;
+    font-size: 16px;
+}
+
+.footer .contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+.footer .social-links a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    line-height: 1;
+    padding: 11px 0;
+    margin-right: 4px;
+    text-align: center;
+    background: #fafafa;
+    color: #ff5722;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+    background: #fafafa;
+    color: #00adb5;
+}
+
+.footer .subscribe {
+    position: relative;
+    width: 100%;
+}
+
+.footer .subscribe ul {
+	color: #fafafa;
+    font-size: 16px;
+}
+
+.footer .subscribe .form-control {
+    float: left;
+    width: calc(100% - 115px);
+    margin-right: 15px;
+    border: none;
+}
+
+.footer .subscribe .form-control:focus {
+    box-shadow: none;
+    color: #fafafa;
+    background: #fafafa;
+}
+
+.footer .subscribe .btn {
+    width: 100px;
+    color: #fafafa;
+	font-weight: 600;
+    background: #00adb5;
+}
+
+.footer .subscribe .btn:hover {
+    color: #ff5722;
+    background: #fafafa;
+}
+
+.footer .subscribe label {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #fafafa;
+}
+
+.footer .footer-bottom {
+    padding: 32px 0;
+}
+
+.footer .copyright {
+    color: #fafafa;
+    text-align: left;
+}
+
+.footer .credit {
+    color: #fafafa;
+    text-align: right;
+}
+
+.footer .copyright a,
+.footer .credit a {
+    color: #fafafa;
+    font-weight: 600;
+}
+
+.footer .copyright a:hover,
+.footer .credit a:hover {
+    color: #fafafa;
+}
+
+@media (max-width: 768px) {
+    .footer .contact-info,
+    .footer .social-links {
+        margin-bottom: 30px;
+    }
+    
+    .footer .copyright,
+    .footer .credit {
+        text-align: center;
+    }
+}
+
+/*form*/
+
+.form {
+	width="400" 
+	height="850" 
+}
