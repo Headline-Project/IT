@@ -212,8 +212,8 @@ img {
 	position: relative;
     	display: inline-block;
 	max-height: 128px;
-	margin-bottom: 24px;
-    padding-bottom: 24px;
+	margin: 0px 24px 24px;
+    	padding-bottom: 24px;
 }
 
 .header h1 {
