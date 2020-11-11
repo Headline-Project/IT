@@ -210,8 +210,8 @@ img {
 
 #logo {
 	position: relative;
-    display: inline-block;
-	height: 128px;
+    	display: inline-block;
+	max-height: 128px;
 	margin-bottom: 24px;
     padding-bottom: 24px;
 }
